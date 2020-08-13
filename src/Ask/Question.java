@@ -1,5 +1,6 @@
 package Ask;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -26,7 +27,12 @@ public class Question {
         if (user_id==-1){
             System.exit(0);
         } else {
-
+            try {
+                FileReader fileReader = new FileReader("users.txt");
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         System.out.println("Enter your question: ");
         question = input.next();

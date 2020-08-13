@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class MainPage {
+    Question question_main = new Question();
     User user = new User();
+
     public void mainMenu(){
         System.out.println("Menu: ");
         System.out.println("\t 1-log in");
@@ -78,15 +80,24 @@ public class MainPage {
         int choice2=input.nextInt();
         switch (choice2){
             case 1:
+                question_main.question_To_me();
             case 2:
+                question_main.question_From_me();
             case 3:
+                question_main.answer_question();
             case 4:
+                question_main.delete_question();
             case 5:
+                question_main.askQuestion();
             case 6:
+                user.user_list();
             case 7:
-            case 8:
-            default:
 
+            case 8:
+                mainMenu();
+            default:
+                System.out.println("Error");
+                System.exit(0);
         }
     }
 

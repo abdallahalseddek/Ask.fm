@@ -10,6 +10,8 @@ public class User {
     private boolean anonymous = true;
     private String anonymous_string;
 
+    public void user_list(){}
+
     public void userFlow() {
         user_id++;
         System.out.println("your id is:" + user_id);
